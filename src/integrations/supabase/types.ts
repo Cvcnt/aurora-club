@@ -14,7 +14,143 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      benefits: {
+        Row: {
+          category: Database["public"]["Enums"]["benefit_category"]
+          created_at: string
+          description: string
+          discount_percentage: number | null
+          id: string
+          image_url: string | null
+          is_active: boolean
+          link: string | null
+          original_price: number | null
+          partner_name: string | null
+          plan_required: Database["public"]["Enums"]["user_plan"]
+          terms_conditions: string | null
+          title: string
+          updated_at: string
+          valid_until: string | null
+        }
+        Insert: {
+          category: Database["public"]["Enums"]["benefit_category"]
+          created_at?: string
+          description: string
+          discount_percentage?: number | null
+          id?: string
+          image_url?: string | null
+          is_active?: boolean
+          link?: string | null
+          original_price?: number | null
+          partner_name?: string | null
+          plan_required?: Database["public"]["Enums"]["user_plan"]
+          terms_conditions?: string | null
+          title: string
+          updated_at?: string
+          valid_until?: string | null
+        }
+        Update: {
+          category?: Database["public"]["Enums"]["benefit_category"]
+          created_at?: string
+          description?: string
+          discount_percentage?: number | null
+          id?: string
+          image_url?: string | null
+          is_active?: boolean
+          link?: string | null
+          original_price?: number | null
+          partner_name?: string | null
+          plan_required?: Database["public"]["Enums"]["user_plan"]
+          terms_conditions?: string | null
+          title?: string
+          updated_at?: string
+          valid_until?: string | null
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          avatar_url: string | null
+          created_at: string
+          id: string
+          name: string
+          phone: string | null
+          plan: Database["public"]["Enums"]["user_plan"]
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          avatar_url?: string | null
+          created_at?: string
+          id?: string
+          name: string
+          phone?: string | null
+          plan?: Database["public"]["Enums"]["user_plan"]
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          avatar_url?: string | null
+          created_at?: string
+          id?: string
+          name?: string
+          phone?: string | null
+          plan?: Database["public"]["Enums"]["user_plan"]
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      redemptions: {
+        Row: {
+          benefit_id: string
+          created_at: string
+          expiry_date: string | null
+          id: string
+          notes: string | null
+          redeemed_at: string
+          redemption_code: string | null
+          status: Database["public"]["Enums"]["redemption_status"]
+          updated_at: string
+          used_at: string | null
+          user_id: string
+        }
+        Insert: {
+          benefit_id: string
+          created_at?: string
+          expiry_date?: string | null
+          id?: string
+          notes?: string | null
+          redeemed_at?: string
+          redemption_code?: string | null
+          status?: Database["public"]["Enums"]["redemption_status"]
+          updated_at?: string
+          used_at?: string | null
+          user_id: string
+        }
+        Update: {
+          benefit_id?: string
+          created_at?: string
+          expiry_date?: string | null
+          id?: string
+          notes?: string | null
+          redeemed_at?: string
+          redemption_code?: string | null
+          status?: Database["public"]["Enums"]["redemption_status"]
+          updated_at?: string
+          used_at?: string | null
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "redemptions_benefit_id_fkey"
+            columns: ["benefit_id"]
+            isOneToOne: false
+            referencedRelation: "benefits"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never
@@ -23,7 +159,17 @@ export type Database = {
       [_ in never]: never
     }
     Enums: {
-      [_ in never]: never
+      benefit_category:
+        | "gastronomia"
+        | "viagem"
+        | "entretenimento"
+        | "compras"
+        | "beleza"
+        | "tecnologia"
+        | "esportes"
+        | "educacao"
+      redemption_status: "pending" | "completed" | "expired" | "cancelled"
+      user_plan: "basic" | "vip"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -150,6 +296,19 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      benefit_category: [
+        "gastronomia",
+        "viagem",
+        "entretenimento",
+        "compras",
+        "beleza",
+        "tecnologia",
+        "esportes",
+        "educacao",
+      ],
+      redemption_status: ["pending", "completed", "expired", "cancelled"],
+      user_plan: ["basic", "vip"],
+    },
   },
 } as const
