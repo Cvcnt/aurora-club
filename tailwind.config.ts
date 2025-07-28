@@ -18,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'poppins': ['Poppins', 'sans-serif'],
+				'inter': ['Inter', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -61,6 +65,13 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				/* Aurora Club custom colors */
+				aurora: {
+					glow: 'hsl(var(--aurora-glow))',
+					gold: 'hsl(var(--aurora-gold))',
+					dark: 'hsl(var(--aurora-dark))',
+					surface: 'hsl(var(--aurora-surface))'
 				}
 			},
 			borderRadius: {
