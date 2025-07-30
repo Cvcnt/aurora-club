@@ -18,9 +18,12 @@ const Auth = () => {
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
 
-  // Redirect if already authenticated
+  // Redirect if already authenticated or if coming from email confirmation
   React.useEffect(() => {
-    if (user) {
+    const urlParams = new URLSearchParams(window.location.search);
+    const isConfirmed = urlParams.get('confirmed');
+    
+    if (user || isConfirmed) {
       navigate('/dashboard');
     }
   }, [user, navigate]);
@@ -44,7 +47,7 @@ const Auth = () => {
       } else {
         toast({
           title: "Login realizado com sucesso!",
-          description: "Bem-vindo ao Aurora Club",
+          description: "Bem-vindo ao NEX RUMO",
         });
         navigate('/dashboard');
       }
@@ -65,7 +68,7 @@ const Auth = () => {
     setLoading(true);
 
     try {
-      const redirectUrl = `${window.location.origin}/dashboard`;
+      const redirectUrl = `${window.location.origin}/auth?confirmed=true`;
       
       const { error } = await supabase.auth.signUp({
         email,
@@ -111,7 +114,7 @@ const Auth = () => {
               <Crown className="h-12 w-12 text-primary" />
             </div>
           </div>
-          <h1 className="text-3xl font-bold gradient-text mb-2">Aurora Club</h1>
+          <h1 className="text-3xl font-bold gradient-text mb-2 drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">NEX RUMO</h1>
           <p className="text-muted-foreground">Experiências exclusivas te aguardam</p>
         </div>
 

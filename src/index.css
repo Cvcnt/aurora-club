@@ -158,6 +158,10 @@ All colors MUST be HSL.
     background-clip: text;
   }
   
+  .nex-text-shadow {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  }
+  
   .nex-button {
     @apply bg-primary text-primary-foreground px-6 py-3 rounded-lg font-medium;
     @apply hover:bg-primary/90 transition-all duration-300;

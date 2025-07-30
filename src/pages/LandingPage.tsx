@@ -65,7 +65,7 @@ const LandingPage = () => {
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Crown className="h-6 w-6 text-primary" />
-            <span className="text-xl font-bold gradient-text">NEX RUMO</span>
+            <span className="text-xl font-bold gradient-text drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">NEX RUMO</span>
           </div>
           <div className="flex items-center gap-4">
             <Button variant="ghost" onClick={() => navigate('/auth')}>
@@ -83,7 +83,7 @@ const LandingPage = () => {
         <div className="absolute inset-0">
           <img 
             src={heroImage} 
-            alt="Aurora Club Premium Experience" 
+            alt="NEX RUMO Premium Experience" 
             className="w-full h-full object-cover opacity-20"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-background/60" />
@@ -97,7 +97,7 @@ const LandingPage = () => {
             
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Bem-vindo ao{' '}
-              <span className="gradient-text">NEX RUMO</span>
+              <span className="gradient-text drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">NEX RUMO</span>
             </h1>
             
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
@@ -131,7 +131,7 @@ const LandingPage = () => {
       <section className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Por que escolher o <span className="gradient-text">NEX RUMO</span>?
+            Por que escolher o <span className="gradient-text drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">NEX RUMO</span>?
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Oferecemos uma experiência premium com benefícios reais que fazem a diferença no seu dia a dia.
@@ -161,7 +161,7 @@ const LandingPage = () => {
       <section className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Escolha seu <span className="gradient-text">plano</span>
+            Escolha seu <span className="gradient-text drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">plano</span>
           </h2>
           <p className="text-xl text-muted-foreground">
             Comece grátis e faça upgrade quando quiser mais benefícios
@@ -214,7 +214,7 @@ const LandingPage = () => {
       <section className="container mx-auto px-4 py-20 text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Pronto para começar sua jornada <span className="gradient-text">profissional</span>?
+            Pronto para começar sua jornada <span className="gradient-text drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">profissional</span>?
           </h2>
           <p className="text-xl text-muted-foreground mb-8">
             Junte-se a milhares de membros que já descobriram os benefícios exclusivos do NEX RUMO.
@@ -235,7 +235,7 @@ const LandingPage = () => {
         <div className="container mx-auto px-4 py-8">
           <div className="flex items-center justify-center gap-2">
             <Crown className="h-5 w-5 text-primary" />
-            <span className="font-bold gradient-text">NEX RUMO</span>
+            <span className="font-bold gradient-text drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">NEX RUMO</span>
           </div>
           <p className="text-center text-muted-foreground mt-2">
             © 2024 NEX RUMO. Experiências exclusivas para você.

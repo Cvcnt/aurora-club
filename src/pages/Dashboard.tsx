@@ -161,7 +161,7 @@ const Dashboard = () => {
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center gap-4">
             <Crown className="h-6 w-6 text-primary" />
-            <span className="text-xl font-bold gradient-text">Aurora Club</span>
+            <span className="text-xl font-bold gradient-text drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">NEX RUMO</span>
           </div>
           
           <div className="flex items-center gap-4">
