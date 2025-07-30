@@ -66,12 +66,12 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				/* Aurora Club custom colors */
-				aurora: {
-					glow: 'hsl(var(--aurora-glow))',
-					gold: 'hsl(var(--aurora-gold))',
-					dark: 'hsl(var(--aurora-dark))',
-					surface: 'hsl(var(--aurora-surface))'
+				/* NEX RUMO custom colors */
+				nex: {
+					glow: 'hsl(var(--nex-glow))',
+					emerald: 'hsl(var(--nex-emerald))',
+					dark: 'hsl(var(--nex-dark))',
+					surface: 'hsl(var(--nex-surface))'
 				}
 			},
 			borderRadius: {

@@ -65,7 +65,7 @@ const LandingPage = () => {
         <div className="container mx-auto px-4 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Crown className="h-6 w-6 text-primary" />
-            <span className="text-xl font-bold gradient-text">Aurora Club</span>
+            <span className="text-xl font-bold gradient-text">NEX RUMO</span>
           </div>
           <div className="flex items-center gap-4">
             <Button variant="ghost" onClick={() => navigate('/auth')}>
@@ -97,12 +97,12 @@ const LandingPage = () => {
             
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Bem-vindo ao{' '}
-              <span className="gradient-text">Aurora Club</span>
+              <span className="gradient-text">NEX RUMO</span>
             </h1>
             
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               Descubra um mundo de experiências exclusivas, descontos premium e benefícios únicos. 
-              Sua jornada luxury começa aqui.
+              Sua jornada profissional começa aqui.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -131,7 +131,7 @@ const LandingPage = () => {
       <section className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Por que escolher o <span className="gradient-text">Aurora Club</span>?
+            Por que escolher o <span className="gradient-text">NEX RUMO</span>?
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Oferecemos uma experiência premium com benefícios reais que fazem a diferença no seu dia a dia.
@@ -214,10 +214,10 @@ const LandingPage = () => {
       <section className="container mx-auto px-4 py-20 text-center">
         <div className="max-w-2xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Pronto para começar sua jornada <span className="gradient-text">premium</span>?
+            Pronto para começar sua jornada <span className="gradient-text">profissional</span>?
           </h2>
           <p className="text-xl text-muted-foreground mb-8">
-            Junte-se a milhares de membros que já descobriram os benefícios exclusivos do Aurora Club.
+            Junte-se a milhares de membros que já descobriram os benefícios exclusivos do NEX RUMO.
           </p>
           <Button 
             size="lg" 
@@ -235,10 +235,10 @@ const LandingPage = () => {
         <div className="container mx-auto px-4 py-8">
           <div className="flex items-center justify-center gap-2">
             <Crown className="h-5 w-5 text-primary" />
-            <span className="font-bold gradient-text">Aurora Club</span>
+            <span className="font-bold gradient-text">NEX RUMO</span>
           </div>
           <p className="text-center text-muted-foreground mt-2">
-            © 2024 Aurora Club. Experiências exclusivas para você.
+            © 2024 NEX RUMO. Experiências exclusivas para você.
           </p>
         </div>
       </footer>
