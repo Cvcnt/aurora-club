@@ -39,11 +39,19 @@ const Auth = () => {
       });
 
       if (error) {
-        toast({
-          title: "Erro no login",
-          description: error.message,
-          variant: "destructive",
-        });
+        if (error.message.includes('Email not confirmed')) {
+          toast({
+            title: "Email não confirmado",
+            description: "Por favor, verifique seu email e clique no link de confirmação antes de fazer login.",
+            variant: "destructive",
+          });
+        } else {
+          toast({
+            title: "Erro no login",
+            description: error.message,
+            variant: "destructive",
+          });
+        }
       } else {
         toast({
           title: "Login realizado com sucesso!",
@@ -90,8 +98,12 @@ const Auth = () => {
       } else {
         toast({
           title: "Cadastro realizado!",
-          description: "Verifique seu email para confirmar a conta",
+          description: "Verifique seu email para confirmar a conta. Você pode tentar fazer login após a confirmação.",
         });
+        // Limpar formulário após cadastro
+        setEmail('');
+        setPassword('');
+        setName('');
       }
     } catch (error) {
       console.error('Sign up error:', error);
