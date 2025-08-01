@@ -163,7 +163,7 @@ const Profile = () => {
           
           <div className="flex items-center gap-2">
             <Crown className="h-6 w-6 text-primary" />
-            <span className="text-xl font-bold gradient-text drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">NEX RUMO</span>
+            <span className="text-xl font-bold nex-logo-text">NEX RUMO</span>
           </div>
         </div>
       </header>

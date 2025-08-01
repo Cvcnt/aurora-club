@@ -126,7 +126,7 @@ const Auth = () => {
               <Crown className="h-12 w-12 text-primary" />
             </div>
           </div>
-          <h1 className="text-3xl font-bold gradient-text mb-2 drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">NEX RUMO</h1>
+          <h1 className="text-3xl font-bold nex-logo-text mb-2">NEX RUMO</h1>
           <p className="text-muted-foreground">Experiências exclusivas te aguardam</p>
         </div>
 
